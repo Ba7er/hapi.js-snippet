@@ -1,5 +1,14 @@
 # Project requirement
 
+
+## Description 
+simple code snippet using hapi.js with JsonWebTocken plugin for authentication 
+It has three API calls 
+  1- register 
+  2- login
+  3- display profile
+  4- update profile 
+  
 ## npm install
 to install the dependecies
 
