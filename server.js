@@ -8,7 +8,7 @@ const HapiJWTConfig = require('./models/jsonwebtoken');
 
 
 const server = Hapi.server({
-    host: "0.0.0.0",
+    host: "localhost",
     port: "3000",
     routes : {
         cors:true
@@ -16,14 +16,11 @@ const server = Hapi.server({
 });
 
 //original mongo connect
-// server.app.db = mongoose.connect(
-//     "mongodb://localhost:27017/hapijslogin",
-//     {useNewUrlParser: true}
-// );
 server.app.db = mongoose.connect(
-    "mongodb://db:27017/hapijslogin",
+    "mongodb://localhost:27017/hapijslogin",
     {useNewUrlParser: true}
 );
+
 
 const init = async () =>{
     await server.register(HapiJWT.plugin).catch(err =>{console.log('could not register JWT', err)})
