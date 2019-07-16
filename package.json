@@ -1,0 +1,19 @@
+{
+  "name": "cdb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/hapi": "^18.3.1",
+    "bcrypt": "^3.0.6",
+    "hapi-jsonwebtoken": "^1.1.0",
+    "mongoose": "^5.6.4",
+    "nodemon": "^1.19.1"
+  }
+}
