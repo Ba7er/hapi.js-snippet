@@ -1,9 +1,9 @@
-#Project requirement
+# Project requirement
 
-##npm install
+## npm install
 to install the dependecies
 
-##npm start
+## npm start
 to run the application
 
-###make sure to have `MongoDB` installed locally on your machine
+### make sure to have `MongoDB` installed locally on your machine
