@@ -36,5 +36,4 @@ const init = async () =>{
     await server.start().then(console.log('the server is running at', server.info.uri))
 };
 
-
 init();
