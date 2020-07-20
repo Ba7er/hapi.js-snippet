@@ -1,11 +1,9 @@
 'user strict'
 
-
 const Hapi= require('@hapi/hapi');
 const mongoose = require('mongoose');
 const HapiJWT = require('hapi-jsonwebtoken');
 const HapiJWTConfig = require('./models/jsonwebtoken');
-
 
 const server = Hapi.server({
     host: "localhost",
@@ -21,13 +19,10 @@ server.app.db = mongoose.connect(
     {useNewUrlParser: true}
 );
 
-
 const init = async () =>{
     await server.register(HapiJWT.plugin).catch(err =>{console.log('could not register JWT', err)})
     server.auth.strategy('jwt', 'hapi-jsonwebtoken', HapiJWTConfig);
     server.auth.default('jwt');
-    
-    
     
     await server.register({
         plugin: require('./routes/Users'),
@@ -41,5 +36,4 @@ const init = async () =>{
     await server.start().then(console.log('the server is running at', server.info.uri))
 };
 
-
-init()
+init();
