@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^18.3.1",
+    "@hapi/hapi": "^19.1.1",
     "bcrypt": "^3.0.6",
     "hapi-jsonwebtoken": "^1.1.0",
     "mongoose": "^5.6.4",
